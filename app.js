@@ -35,21 +35,9 @@ checkBtn.addEventListener('click',() =>{
     }else if(inputValue === ''){
         validationText.style.display = 'block';
 
-    }else if(inputValue > luckyNumber){
+    }else if(inputValue !== luckyNumber){
         if(score > 0){
-            guessingContent.textContent = 'too high number';
-            validationText.style.display = 'none';
-            score--;
-            scoreText.textContent = score;
-        }else{
-            guessingContent.textContent = 'You lose the game';
-            validationText.style.display = 'none';
-            scoreText.textContent = 0;
-        }
-        
-    }else if(inputValue < luckyNumber){
-        if(score > 0){
-            guessingContent.textContent = 'too low number';
+            guessingContent.textContent = inputValue > luckyNumber ? 'too high number' :  'too low number' ;
             validationText.style.display = 'none';
             score--;
             scoreText.textContent = score;
