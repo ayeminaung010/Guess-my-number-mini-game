@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess my number </title>
+
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+<!-- google font  -->
+<link href='https://fonts.googleapis.com/css?family=Silkscreen' rel='stylesheet'>
+
+<!-- font-awesome  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+       body {
+            font-family: 'Silkscreen';font-size: 22px;
+            background-color: black;
+            color: grey;
+        }
+    </style>
+</head>
+<body class=" ">
+        <div class="container">
+            <div class="row my-3">
+                <div class="col-3">
+                    <button class="btn btn-outline-danger againBtn" id="againBtn" style="height: 4rem;width: 7rem;">Again</button>
+                </div>
+                <div class="col offset-6 ">
+                    <p>(Between 1 and 20)</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-5 offset-4">
+                    <h1>Guess my number!</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <hr class=" bg-secondary  mt-5 position-relative" style="height: 4px;">
+                <div class="col-5 bg-secondary text-dark text-center offset-5 position-absolute" style="width: 70px;top: 170px;">
+                    <h1 id="answer" class="answer text-white">?</h1>
+                </div>
+            </div>
+
+            <div class="row " style=" margin-top: 100px;">
+                <div class="col offset-1">
+                    <input type="number" class="form-control bg-dark w-25 text-white fs-2 inputValue" style="height:80px;">
+                    <small class="text-danger validationText fs-6 " style="display: none ;">Fill Here!</small>
+                </div>
+                <div class="col">
+                    <h3 id=" guessingContent" class="guessingContent">Start guessing.....</h3>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col mt-4 offset-1">
+                    <button class="btn btn-outline-light checkBtn" id=" checkBtn" style="width: 9rem;">Check</button>
+                </div>
+                <div class="col">
+                    <h4 > &#128175; Score : <span id="score"  class="score">20</span> </h4>
+                    <h4 > <i class="fa-solid fa-award text-warning"></i> Highscore : <span id="highScore" class="highScore">0</span></h4>
+                </div>
+            </div>
+        </div>
+
+</body>
+<script src="app.js"></script>
+</html>
